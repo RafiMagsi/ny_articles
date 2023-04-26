@@ -17,7 +17,7 @@ class HomeController extends GetxController {
   }
 
   getArticles(String period) async {
-    var response = await APIClient().get(getArticleUrl(section: APIEndPoints.section, period: period)).catchError((error) {});
+    var response = await APIClient().get(getArticleUrl(section: APIEndPoints.allSection, period: period)).catchError((error) {});
     if (response == null) return;
     popularArticles.value = ArticleModel.fromJson(response);
   }

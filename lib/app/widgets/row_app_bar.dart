@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ny_articles/app/configs/sizes.dart';
 
 class RowAppBar extends StatelessWidget implements PreferredSizeWidget {
   const RowAppBar({Key? key, this.tabHeight, this.title}) : super(key: key);
@@ -12,7 +13,7 @@ class RowAppBar extends StatelessWidget implements PreferredSizeWidget {
     return PreferredSize(
       preferredSize: tabHeight ?? preferredSize,
       child: AppBar(
-        title: Text(title ?? 'Flutter App'),
+        title: Text(title ?? 'Flutter App', style: const TextStyle(fontSize: AppSizes.small_4)),
         leading: IconButton(
           icon: const Icon(Icons.menu),
           onPressed: () {},

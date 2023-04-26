@@ -37,9 +37,11 @@ class ArticleDetail extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  article.byline ?? '',
-                  style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.headingText),
+                Expanded(
+                  child: Text(
+                    article.byline ?? '',
+                    style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.headingText),
+                  ),
                 ),
                 Row(
                   children: [

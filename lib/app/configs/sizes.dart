@@ -2,6 +2,7 @@ abstract class AppSizes {
   static const double small_1 = 8;
   static const double small_2 = 12;
   static const double small_3 = 16;
+  static const double small_4 = 18;
   static const double medium_1 = 20;
   static const double medium_2 = 24;
   static const double medium_3 = 28;

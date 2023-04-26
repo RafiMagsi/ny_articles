@@ -91,13 +91,14 @@ class ArticleItem extends StatelessWidget {
                   ],
                 ),
               )),
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.arrow_forward_ios,
-                    color: AppColors.headingText,
-                    size: 22,
-                  ))
+              const Padding(
+                padding: EdgeInsets.only(right: 12.0),
+                child: Icon(
+                  Icons.arrow_forward_ios,
+                  color: AppColors.headingText,
+                  size: 18,
+                ),
+              )
             ],
           ),
         ),
