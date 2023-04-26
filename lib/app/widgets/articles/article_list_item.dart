@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ny_articles/app/configs/colors.dart';
 import 'package:ny_articles/app/configs/sizes.dart';
 import 'package:ny_articles/app/models/article_model.dart';
+import 'package:ny_articles/app/utils/date_util.dart';
 import 'package:ny_articles/app/widgets/articles/article_detail.dart';
 
 class ArticleItem extends StatelessWidget {
@@ -14,7 +15,7 @@ class ArticleItem extends StatelessWidget {
     final double screenHeight = MediaQuery.of(context).size.height;
 
     return SizedBox(
-      height: screenHeight * 0.12,
+      height: screenHeight * 0.13,
       child: Row(
         children: [
           CircleAvatar(
@@ -38,7 +39,7 @@ class ArticleItem extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       article.source,
-                      style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.primary),
+                      style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.subText),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -48,7 +49,7 @@ class ArticleItem extends StatelessWidget {
                         Expanded(
                           child: Text(
                             article.section ?? '',
-                            style: const TextStyle(color: AppColors.primary),
+                            style: const TextStyle(color: AppColors.subText),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                           ),
@@ -59,15 +60,15 @@ class ArticleItem extends StatelessWidget {
                             const Icon(
                               Icons.today,
                               size: 20,
-                              color: AppColors.primary,
+                              color: AppColors.headingText,
                             ),
                             const SizedBox(
                               width: 5,
                             ),
                             Text(
-                              article.publishedDate.toString(),
+                              DateUtil.formatDate(article.publishedDate),
                               style: const TextStyle(
-                                color: AppColors.primary,
+                                color: AppColors.subText,
                               ),
                             ),
                           ],
@@ -91,7 +92,7 @@ class ArticleItem extends StatelessWidget {
               },
               icon: const Icon(
                 Icons.arrow_forward_ios,
-                color: AppColors.primary,
+                color: AppColors.headingText,
               ))
         ],
       ),

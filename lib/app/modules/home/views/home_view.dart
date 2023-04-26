@@ -14,7 +14,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return PageTemplate(
       pageTitle: AppStrings.appName,
-      body: ArticleListView(articles: controller.popularArticles.value),
+      body: Obx(() => ArticleListView(articles: controller.popularArticles.value)),
     );
   }
 }

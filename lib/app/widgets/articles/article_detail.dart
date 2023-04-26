@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ny_articles/app/configs/colors.dart';
 import 'package:ny_articles/app/configs/strings.dart';
 import 'package:ny_articles/app/models/article_model.dart';
+import 'package:ny_articles/app/utils/date_util.dart';
 
 class ArticleDetail extends StatelessWidget {
   const ArticleDetail({required this.article, Key? key}) : super(key: key);
@@ -38,18 +39,18 @@ class ArticleDetail extends StatelessWidget {
               children: [
                 Text(
                   article.byline ?? '',
-                  style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.primary),
+                  style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.headingText),
                 ),
                 Row(
                   children: [
                     const Icon(
                       Icons.today,
-                      color: AppColors.primary,
+                      color: AppColors.subText,
                       size: 20,
                     ),
                     Text(
-                      article.publishedDate.toString(),
-                      style: const TextStyle(color: AppColors.primary),
+                      DateUtil.formatDate(article.publishedDate),
+                      style: const TextStyle(color: AppColors.subText),
                     ),
                   ],
                 ),

@@ -10,9 +10,9 @@ const Duration TIME_OUT_DURATION = Duration(minutes: 1);
 class APIClient {
   final http.Client _client = http.Client();
 
-  Future<dynamic> get(String baseUrl, String url, {file = false, Map<String, String>? headers}) async {
-    var uri = baseUrl + url;
-    debugPrint('===GET request===, url: $url');
+  Future<dynamic> get(String url, {file = false, Map<String, String>? headers}) async {
+    var uri = url;
+    debugPrint('===GET request===, url: $uri');
 
     var responseJson = {};
     try {
