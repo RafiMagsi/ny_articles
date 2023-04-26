@@ -52,7 +52,7 @@ class Article {
     this.nytdsection,
     this.adxKeywords,
     this.column,
-    this.byline,
+    this.byline = '',
     this.type,
     this.title = '',
     this.resultAbstract,
@@ -62,6 +62,8 @@ class Article {
     this.geoFacet,
     this.media,
     this.etaId,
+    this.thumb,
+    this.image,
   });
 
   String? uri;
@@ -76,7 +78,7 @@ class Article {
   String? nytdsection;
   String? adxKeywords;
   dynamic column;
-  String? byline;
+  String byline;
   String? type;
   String title;
   String? resultAbstract;
@@ -86,6 +88,8 @@ class Article {
   List<String>? geoFacet;
   List<Media>? media;
   int? etaId;
+  String? thumb;
+  String? image;
 
   factory Article.fromRawJson(String str) => Article.fromJson(json.decode(str));
 
@@ -104,7 +108,7 @@ class Article {
         nytdsection: json["nytdsection"],
         adxKeywords: json["adx_keywords"],
         column: json["column"],
-        byline: json["byline"],
+        byline: json["byline"] ?? '',
         type: json["type"],
         title: json["title"] ?? '',
         resultAbstract: json["abstract"],
@@ -148,6 +152,7 @@ class Article {
     if (med.type == 'image' && med.mediaMetadata != null && med.mediaMetadata?.length == 3) {
       thumb = med.mediaMetadata?.elementAt(0).url ?? AppStrings.thumb;
     }
+    this.thumb = thumb;
     return thumb;
   }
 
@@ -157,6 +162,7 @@ class Article {
     if (med.type == 'image' && med.mediaMetadata != null && med.mediaMetadata?.length == 3) {
       img = med.mediaMetadata?.elementAt(2).url ?? AppStrings.thumb;
     }
+    image = image;
     return img;
   }
 }

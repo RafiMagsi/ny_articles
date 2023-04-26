@@ -49,7 +49,7 @@ class ArticleItem extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          article.source,
+                          article.byline,
                           style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.subText),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
