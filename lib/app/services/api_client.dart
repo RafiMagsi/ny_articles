@@ -7,9 +7,11 @@ import 'package:ny_articles/app/services/app_exceptions.dart';
 
 const Duration TIME_OUT_DURATION = Duration(minutes: 1);
 
+// API Client to call any kind of API Url
 class APIClient {
   final http.Client _client = http.Client();
 
+  // Get Request
   Future<dynamic> get(String url, {file = false, Map<String, String>? headers}) async {
     var uri = url;
     debugPrint('===GET request===, url: $uri');
@@ -30,6 +32,7 @@ class APIClient {
     return responseJson;
   }
 
+  // Post request
   Future<dynamic> post(String baseUrl, String url, dynamic payloadObj) async {
     debugPrint('===POST request===, url: $url');
     var uri = baseUrl + url;
@@ -49,6 +52,7 @@ class APIClient {
     return responseJson;
   }
 
+  // Return response according to the Status code, or throw exception
   dynamic _returnResponse(http.Response response) {
     debugPrint("Response: ${response.body}");
     switch (response.statusCode) {

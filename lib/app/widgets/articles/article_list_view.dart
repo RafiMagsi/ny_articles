@@ -3,6 +3,7 @@ import 'package:ny_articles/app/configs/sizes.dart';
 import 'package:ny_articles/app/models/article_model.dart';
 import 'package:ny_articles/app/widgets/articles/article_list_item.dart';
 
+// Article List view
 class ArticleListView extends StatelessWidget {
   final ArticleModel? articles;
 

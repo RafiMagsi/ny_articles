@@ -4,6 +4,7 @@ import 'package:ny_articles/app/configs/strings.dart';
 import 'package:ny_articles/app/models/article_model.dart';
 import 'package:ny_articles/app/utils/date_util.dart';
 
+// Show Article Details view when tap on Article list item
 class ArticleDetail extends StatelessWidget {
   const ArticleDetail({required this.article, Key? key}) : super(key: key);
 

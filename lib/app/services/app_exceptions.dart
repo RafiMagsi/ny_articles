@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+// Different API exceptions
 class AppException implements Exception {
   final String? message;
   final String? prefix;

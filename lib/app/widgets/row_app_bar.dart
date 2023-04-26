@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ny_articles/app/configs/sizes.dart';
 
+// Row appbar with multiple widgets in the APPBAR
 class RowAppBar extends StatelessWidget implements PreferredSizeWidget {
   const RowAppBar({Key? key, this.tabHeight, this.title}) : super(key: key);
   final Size? tabHeight;

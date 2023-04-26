@@ -1,10 +1,5 @@
-// To parse this JSON data, do
-//
-//     final articleModel = articleModelFromJson(jsonString);
-
+// Complete Article model as received in API response
 import 'dart:convert';
-
-import 'package:ny_articles/app/configs/strings.dart';
 
 class ArticleModel {
   ArticleModel({
@@ -146,6 +141,7 @@ class Article {
         "eta_id": etaId,
       };
 
+  //Extracting Media thumbnail
   String? get mediaThumb {
     String? thumb;
     var med = media?.elementAt(0) ?? Media();
@@ -156,6 +152,7 @@ class Article {
     return thumb;
   }
 
+  // Extracting image URL
   String? get imageUrl {
     String? img;
     var med = media?.elementAt(0) ?? Media();

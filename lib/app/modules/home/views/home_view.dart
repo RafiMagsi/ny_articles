@@ -12,6 +12,7 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
+    // Using Page Template to reduce the code
     return PageTemplate(
       pageTitle: AppStrings.appName,
       body: Obx(() => ArticleListView(articles: controller.popularArticles.value)),

@@ -1,3 +1,4 @@
+//Sizes to use for different values
 abstract class AppSizes {
   static const double small_1 = 8;
   static const double small_2 = 12;

@@ -7,6 +7,7 @@ import 'package:ny_articles/app/models/article_model.dart';
 import 'package:ny_articles/app/utils/date_util.dart';
 import 'package:ny_articles/app/widgets/articles/article_detail.dart';
 
+// Article list item
 class ArticleItem extends StatelessWidget {
   const ArticleItem({required this.article, Key? key}) : super(key: key);
 
@@ -18,6 +19,7 @@ class ArticleItem extends StatelessWidget {
 
     return InkWell(
       onTap: () {
+        // OnTap will route to Article Details view
         Get.to(
           () => ArticleDetail(
             article: article,
