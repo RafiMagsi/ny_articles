@@ -34,8 +34,8 @@ void main() {
       ArticleModel articles = await homeController.getArticles("1");
 
       expect(articles, isA<ArticleModel>());
-      expect(articles.results?.elementAt(0).mediaThumb.isNotEmpty, true);
-      expect(articles.results?.elementAt(0).imageUrl.isNotEmpty, true);
+      expect(articles.results?.elementAt(0).mediaThumb != null, true);
+      expect(articles.results?.elementAt(0).imageUrl != null, true);
     });
 
     test('Fetch articles with status 200 without media-metadata', () async {
@@ -47,8 +47,8 @@ void main() {
       ArticleModel articles = await homeController.getArticles("1");
 
       expect(articles, isA<ArticleModel>());
-      expect(articles.results?.elementAt(0).mediaThumb.isNotEmpty, true);
-      expect(articles.results?.elementAt(0).imageUrl.isNotEmpty, true);
+      expect(articles.results?.elementAt(0).mediaThumb != null, true);
+      expect(articles.results?.elementAt(0).imageUrl != null, true);
     });
 
     test('Fetch articles with status 200 without media', () async {

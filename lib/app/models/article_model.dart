@@ -146,21 +146,21 @@ class Article {
         "eta_id": etaId,
       };
 
-  String get mediaThumb {
-    var thumb = "";
+  String? get mediaThumb {
+    String? thumb;
     var med = media?.elementAt(0) ?? Media();
     if (med.type == 'image' && med.mediaMetadata != null && med.mediaMetadata?.length == 3) {
-      thumb = med.mediaMetadata?.elementAt(0).url ?? AppStrings.thumb;
+      thumb = med.mediaMetadata?.elementAt(0).url;
     }
     this.thumb = thumb;
     return thumb;
   }
 
-  String get imageUrl {
-    var img = "";
+  String? get imageUrl {
+    String? img;
     var med = media?.elementAt(0) ?? Media();
     if (med.type == 'image' && med.mediaMetadata != null && med.mediaMetadata?.length == 3) {
-      img = med.mediaMetadata?.elementAt(2).url ?? AppStrings.thumb;
+      img = med.mediaMetadata?.elementAt(2).url;
     }
     image = image;
     return img;

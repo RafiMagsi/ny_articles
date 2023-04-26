@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ny_articles/app/configs/colors.dart';
 import 'package:ny_articles/app/configs/sizes.dart';
+import 'package:ny_articles/app/configs/strings.dart';
 import 'package:ny_articles/app/models/article_model.dart';
 import 'package:ny_articles/app/utils/date_util.dart';
 import 'package:ny_articles/app/widgets/articles/article_detail.dart';
@@ -30,7 +31,7 @@ class ArticleItem extends StatelessWidget {
           child: Row(
             children: [
               CircleAvatar(
-                backgroundImage: NetworkImage(article.mediaThumb),
+                backgroundImage: NetworkImage(article.mediaThumb ?? AppStrings.thumb),
               ),
               Expanded(
                   child: Container(

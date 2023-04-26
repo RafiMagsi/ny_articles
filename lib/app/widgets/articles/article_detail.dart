@@ -24,7 +24,7 @@ class ArticleDetail extends StatelessWidget {
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
           ),
-          article.imageUrl.isNotEmpty ? Image(image: NetworkImage(article.imageUrl)) : Container(),
+          article.imageUrl != null ? Image(image: NetworkImage(article.imageUrl!)) : Container(),
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Text(article.resultAbstract ?? ''),
@@ -39,7 +39,7 @@ class ArticleDetail extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    article.byline ?? '',
+                    article.byline,
                     style: const TextStyle(fontStyle: FontStyle.italic, color: AppColors.headingText),
                   ),
                 ),
