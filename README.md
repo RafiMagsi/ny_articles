@@ -1,16 +1,17 @@
-# ny_articles
-
-A new Flutter project.
-
+# NY Most Viewed Popular Articles
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+NY Most Viewed Popular Articles project, with following:
+1. Used GetX for State management.
+2. Used Mockito for generating Mock classes for testing widgets and services
+3. To generate mock files build_runner has to be executed
+   1. flutter pub run build_runner build
+   2. flutter pub run build_runner build --delete-conflicting-outputs
+4. Code coverage added
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Flutter Code Coverage:
+Use the following steps to generate coverage reports and test the code:
+1. Run the command: flutter test --coverage
+2. Install Code Coverage "lcov" if it's not installed already with this command: brew install lcov
+3. To generate the report run the following command: genhtml coverage/lcov.info -o coverage/html
+4. To view the generated HTML Reports run the following command: open coverage/html/index.html
