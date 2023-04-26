@@ -11,7 +11,7 @@ class ArticleListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      padding: const EdgeInsets.fromLTRB(AppSizes.small_3, AppSizes.small_2, AppSizes.small_1, AppSizes.small_3),
+      padding: const EdgeInsets.fromLTRB(0, AppSizes.small_2, 0, AppSizes.small_3),
       itemCount: articles?.results?.length ?? 0,
       separatorBuilder: (BuildContext context, int index) => const Divider(),
       itemBuilder: (BuildContext context, int index) {
