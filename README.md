@@ -6,8 +6,8 @@
 2. Used Mockito for generating Mock classes for testing widgets and services
 3. To generate mock files build_runner has to be executed
 ```
->    1. flutter pub run build_runner build
->    2. flutter pub run build_runner build --delete-conflicting-outputs
+> 1. flutter pub run build_runner build
+> 2. flutter pub run build_runner build --delete-conflicting-outputs
 ```
 4. Code coverage added
 
