@@ -144,9 +144,11 @@ class Article {
   //Extracting Media thumbnail
   String? get mediaThumb {
     String? thumb;
-    var med = media?.elementAt(0) ?? Media();
-    if (med.type == 'image' && med.mediaMetadata != null && med.mediaMetadata?.length == 3) {
-      thumb = med.mediaMetadata?.elementAt(0).url;
+    if (media?.isNotEmpty ?? false) {
+      var med = media?.elementAt(0) ?? Media();
+      if (med.type == 'image' && med.mediaMetadata != null && med.mediaMetadata?.length == 3) {
+        thumb = med.mediaMetadata?.elementAt(0).url;
+      }
     }
     this.thumb = thumb;
     return thumb;
@@ -155,9 +157,11 @@ class Article {
   // Extracting image URL
   String? get imageUrl {
     String? img;
-    var med = media?.elementAt(0) ?? Media();
-    if (med.type == 'image' && med.mediaMetadata != null && med.mediaMetadata?.length == 3) {
-      img = med.mediaMetadata?.elementAt(2).url;
+    if (media?.isNotEmpty ?? false) {
+      var med = media?.elementAt(0) ?? Media();
+      if (med.type == 'image' && med.mediaMetadata != null && med.mediaMetadata?.length == 3) {
+        img = med.mediaMetadata?.elementAt(2).url;
+      }
     }
     image = image;
     return img;
